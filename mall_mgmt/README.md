@@ -270,7 +270,7 @@ This project is licensed under the MIT License.
 
 ## 👨‍💻 Author
 
-**Jatin Saini** · [GitHub](https://github.com/jatinsaini82877)
+**Jatin Saini** · [GitHub](https://github.com/jatinsaini001)
 
 ---
 <div align="center">Built with ❤️ using Flask & MongoDB</div>
