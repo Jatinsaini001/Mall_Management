@@ -219,11 +219,11 @@ Copy the `https://xxxx.ngrok.io` link and share it with anyone to access your lo
 
 | Dashboard | POS Terminal |
 |---|---|
-| ![Dashboard](screenshots/dashboard.png) | ![POS](screenshots/pos.png) |
+| ![Dashboard](dashboard.jpeg) | ![POS](POS.jpeg) |
 
 | Reports | AI Insights |
 |---|---|
-| ![Reports](screenshots/reports.png) | ![AI](screenshots/aiinsights.png) |
+| ![Reports](report.jpeg) | ![AI](aiinsights.jpeg) |
 
 ---
 
