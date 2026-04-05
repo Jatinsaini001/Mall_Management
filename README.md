@@ -2,12 +2,12 @@
 
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-2.x-000000?style=for-the-badge&logo=flask&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-2.x-000000?style=for-the-badge\&logo=flask\&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=for-the-badge\&logo=mongodb\&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-**A full-stack web application for managing every aspect of a modern shopping mall — shops, staff, POS billing, inventory, security, and AI-powered insights.**
+**A full-stack system to manage modern shopping malls — from daily operations to AI-driven insights — all in one unified dashboard.**
 
 [🌐 Live Demo](#-live-demo) · [📸 Screenshots](#-screenshots) · [⚙️ Installation](#-installation) · [✨ Features](#-features)
 
@@ -17,110 +17,111 @@
 
 ## 📌 About The Project
 
-MallOS solves a real operational problem: **managing a shopping mall is chaotic without a central system.** Shop rent tracking, employee records, daily billing, inventory control, customer loyalty, security incidents, and financial reports are all scattered across notebooks or Excel sheets.
+Managing a mall is complex — data is scattered across Excel sheets, notebooks, and disconnected tools.
 
-MallOS brings everything into **one clean, role-based web dashboard** — accessible from any device, backed by MongoDB Atlas, and designed for actual mall operations.
+MallOS solves this by bringing everything into a **single, centralized platform**.
+
+It allows mall administrators to:
+
+* Track shop rents and tenants
+* Manage employees and suppliers
+* Run a full billing system (POS)
+* Control inventory in real-time
+* Monitor finances and expenses
+* Analyze performance using AI insights
+
+👉 Built not just as a project, but as a **real-world scalable solution**.
 
 ---
 
 ## ✨ Features
 
 ### 🏪 Core Management
-- **Shops** — Add/manage tenants, floors, rent amounts, and categories
-- **Employees** — Full staff directory with department, salary, and join date
-- **Inventory** — Product catalog with SKU, stock levels, cost/price, and low-stock alerts
+
+* Shops with rent, category, and floor tracking
+* Employee directory with role and salary management
+* Inventory system with SKU, pricing, and stock alerts
 
 ### 💳 Point of Sale (POS)
-- Live product search and cart system
-- Discount support — percentage or flat amount
-- Payment methods — Cash, Card, UPI (with QR code generation)
-- Automatic stock deduction on every sale
-- Loyalty points awarded to registered customers
+
+* Fast billing interface with live search
+* Discount support (percentage / flat)
+* Payment modes: Cash, Card, UPI
+* Auto stock deduction
+* Loyalty points system
 
 ### 📦 Orders & Returns
-- Full order history with status pipeline (Pending / Completed / Returned)
-- Stock auto-restored when order is marked as returned
-- Detailed receipt view per order
+
+* Full order lifecycle tracking
+* Return handling with stock restoration
+* Detailed order receipts
 
 ### 👥 Customers & Suppliers
-- Customer loyalty tiers (Bronze → Silver → Gold → Platinum)
-- Points management and visit tracking
-- Supplier directory with outstanding balance tracking
+
+* Customer loyalty tiers and tracking
+* Points and visit analytics
+* Supplier management with balance tracking
 
 ### 💰 Finance
-- Expense recording by category
-- Revenue vs expense profit/loss calculation
-- Monthly expense charts
+
+* Expense tracking by category
+* Profit/Loss calculation
+* Monthly financial insights
 
 ### 🔧 Operations
-- **Maintenance** — Log repair requests with priority and technician assignment
-- **Security** — Incident reporting with severity levels + CCTV camera status board
-- **Mall Services** — Parking slots, events, food court stalls, cinema screens
+
+* Maintenance request system
+* Security incident logging
+* Mall services (parking, events, food court, cinema)
 
 ### 📣 Marketing & Feedback
-- Campaign management (Email / SMS / Social)
-- Coupon/discount code system with usage limits
-- Customer feedback and complaint management with staff responses
+
+* Campaign creation (Email / SMS / Social)
+* Coupon and discount management
+* Customer feedback system
 
 ### 📊 Reports & AI Insights
-- Monthly sales and expense charts
-- Top products, payment breakdown, customer tier distribution
-- AI-powered predictions: sales trend, fast/slow movers, dormant customer alerts
-- Export reports to **Excel** or **PDF**
+
+* Sales trends and analytics
+* Top products and revenue breakdown
+* Customer behavior insights
+* Export reports to Excel & PDF
 
 ### 🔐 Authentication
-- Three roles: **Admin**, **Manager**, **Cashier** — each with restricted access
-- Session timeout after 30 minutes of inactivity
-- Secure password hashing with Werkzeug
+
+* Role-based access (Admin / Manager / Cashier)
+* Session timeout for security
+* Secure password hashing
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|---|---|
-| **Backend** | Python 3, Flask |
-| **Database** | MongoDB Atlas (PyMongo) + SQLite (auth) |
-| **Frontend** | Jinja2 Templates, HTML5, CSS3, Vanilla JS |
-| **Auth** | Werkzeug password hashing, Flask sessions |
-| **PDF Export** | ReportLab |
-| **Excel Export** | Pandas + OpenPyXL |
-| **Fonts** | Syne, DM Sans (Google Fonts) |
-| **Deployment** | Render + MongoDB Atlas |
+| Layer      | Technology               |
+| ---------- | ------------------------ |
+| Backend    | Python, Flask            |
+| Database   | MongoDB Atlas + SQLite   |
+| Frontend   | HTML, CSS, JavaScript    |
+| Auth       | Flask Sessions, Werkzeug |
+| Reports    | ReportLab, Pandas        |
+| Deployment | Render                   |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-mall_mgmt/
+Mall_Management/
 │
-├── app.py                  ← All Flask routes (5 phases)
-├── auth.py                 ← Authentication: login, logout, role decorators
-├── database.py             ← MongoDB connection + all 17 collections
-├── requirements.txt        ← Python dependencies
-├── .env                    ← Secrets (NOT committed — see .env.example)
-├── .env.example            ← Safe template to share with team
-├── .gitignore              ← Git exclusions
+├── README.md
+├── screenshots/
 │
-├── templates/              ← Jinja2 HTML pages
-│   ├── base.html           ← Master layout: sidebar, topbar, nav
-│   ├── login.html          ← Login page
-│   ├── dashboard.html      ← KPI overview + alerts
-│   ├── pos.html            ← POS terminal
-│   ├── orders.html         ← Order history
-│   ├── inventory.html      ← Product catalog
-│   ├── customers.html      ← Loyalty management
-│   ├── suppliers.html      ← Supplier directory
-│   ├── finance.html        ← Expense tracking
-│   ├── reports.html        ← Charts + export
-│   ├── aiinsights.html     ← AI predictions
-│   └── ...                 ← (and more)
-│
-└── static/
-    ├── css/style.css       ← Full dark theme + responsive CSS
-    ├── js/main.js          ← Animations, flash dismiss
-    └── qr/                 ← Auto-generated QR codes (not committed)
+├── mall_mgmt/
+│   ├── app.py
+│   ├── auth.py
+│   ├── database.py
+│   ├── templates/
+│   └── static/
 ```
 
 ---
@@ -128,88 +129,51 @@ mall_mgmt/
 ## ⚙️ Installation
 
 ### Prerequisites
-- Python 3.10 or higher
-- MongoDB Atlas account (free) **or** MongoDB installed locally
-- Git
 
-### Step 1 — Clone the repository
+* Python 3.10+
+* MongoDB Atlas or local MongoDB
+* Git
+
+### Clone repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mallos.git
-cd mallos
+git clone https://github.com/YOUR_USERNAME/Mall_Management.git
+cd Mall_Management
 ```
 
-### Step 2 — Create a virtual environment
+### Setup environment
 
 ```bash
-# Windows (CMD or PowerShell)
 python -m venv venv
 venv\Scripts\activate
-
-# Mac / Linux
-python3 -m venv venv
-source venv/bin/activate
+pip install -r mall_mgmt/requirements.txt
 ```
 
-### Step 3 — Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Step 4 — Set up environment variables
-
-```bash
-# Windows
-copy .env.example .env
-
-# Mac/Linux
-cp .env.example .env
-```
-
-Open `.env` and fill in your values:
+### Configure `.env`
 
 ```env
-MONGO_URI=mongodb://localhost:27017/
+MONGO_URI=your_mongodb_uri
 DB_NAME=mall_management
-SECRET_KEY=your_random_secret_key_here
+SECRET_KEY=your_secret_key
 ```
 
-> 💡 Generate a secure SECRET_KEY:
-> ```bash
-> python -c "import secrets; print(secrets.token_hex(32))"
-> ```
-
-### Step 5 — Run the app
+### Run
 
 ```bash
-python app.py
+python mall_mgmt/app.py
 ```
 
-Open: **http://localhost:5000**
-
-### Default Login Credentials
-
-| Username | Password | Role |
-|---|---|---|
-| `admin` | `admin123` | Admin (full access) |
-| `manager` | `manager123` | Manager |
-| `cashier` | `cashier123` | Cashier (POS only) |
-
-> ⚠️ Change these passwords immediately after first login.
+Open: http://localhost:5000
 
 ---
 
 ## 🌐 Live Demo
 
-Currently shared locally via **ngrok**:
+Run locally or use ngrok:
 
 ```bash
-# In a second terminal while app.py is running:
 ngrok http 5000
 ```
-
-Copy the `https://xxxx.ngrok.io` link and share it with anyone to access your local app.
 
 ---
 
@@ -219,52 +183,31 @@ Copy the `https://xxxx.ngrok.io` link and share it with anyone to access your lo
 ![POS](screenshots/POS.jpeg)
 ![Report](screenshots/report.jpeg)
 ![AI Insights](screenshots/aiInsight.jpeg)
----
-
-## ☁️ Deploy to Render (Free)
-
-### 1. Set up MongoDB Atlas
-1. [mongodb.com/atlas](https://www.mongodb.com/atlas) → Create free cluster
-2. Database Access → Add user with read/write
-3. Network Access → Allow `0.0.0.0/0`
-4. Connect → Drivers → Copy URI
-
-### 2. Deploy on Render
-1. Push code to GitHub
-2. [render.com](https://render.com) → New → Web Service → Connect repo
-3. Settings:
-
-| Setting | Value |
-|---|---|
-| Build Command | `pip install -r requirements.txt` |
-| Start Command | `gunicorn app:app` |
-
-4. Environment Variables → Add `MONGO_URI`, `DB_NAME`, `SECRET_KEY`
-5. Click **Deploy**
 
 ---
 
 ## 🚀 Future Improvements
 
-- [ ] SMS/Email notifications for low stock and maintenance alerts
-- [ ] Dark/Light mode toggle
-- [ ] Barcode scanner integration for POS
-- [ ] Multi-mall support (multiple branches)
-- [ ] Interactive Chart.js graphs on reports
-- [ ] Automated MongoDB backups
-- [ ] Two-Factor Authentication (TOTP)
+* Barcode scanner integration
+* Multi-mall support
+* SMS/Email alerts
+* Advanced analytics dashboard
+* Mobile application
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+MIT License
 
 ---
 
 ## 👨‍💻 Author
 
-**Jatin Saini** · [GitHub](https://github.com/jatinsaini001)
+**Jatin Saini**
 
 ---
-<div align="center">Built with ❤️ using Flask & MongoDB</div>
+
+<div align="center">
+Built with ❤️ using Flask & MongoDB
+</div>
