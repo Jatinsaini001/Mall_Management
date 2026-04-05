@@ -215,15 +215,10 @@ Copy the `https://xxxx.ngrok.io` link and share it with anyone to access your lo
 
 ## 📸 Screenshots
 
-> Add screenshots to a `screenshots/` folder and update the table below.
-
-| Dashboard | POS Terminal |
-|---|---|
-| ![Dashboard](dashboard.png) | ![POS](POS.png) |
-
-| Reports | AI Insights |
-|---|---|
-| ![Reports](report.png) | ![AI](aiinsights.png) |
+![Dashboard](../screenshots/dashboard.jpeg)
+![POS](../screenshots/POS.jpeg)
+![Report](../screenshots/report.jpeg)
+![AI Insights](../screenshots/aiInsight.jpeg)
 
 ---
 
